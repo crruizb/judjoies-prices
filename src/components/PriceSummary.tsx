@@ -34,9 +34,9 @@ export default function PriceSummary({
         {resolved.map((inst, idx) => (
           <div
             key={idx}
-            className="flex items-center justify-between gap-4 px-4 py-3 rounded border border-border-line bg-surface"
+            className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 px-4 py-3 rounded border border-border-line bg-surface"
           >
-            <div className="flex flex-wrap gap-x-3 gap-y-1">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:gap-x-3 gap-y-0.5 sm:gap-y-1">
               {filterFields.map((field) =>
                 inst.filters[field] ? (
                   <span
@@ -51,7 +51,7 @@ export default function PriceSummary({
                 ) : null,
               )}
             </div>
-            <span className="font-display text-[1.1rem] font-semibold text-gold whitespace-nowrap">
+            <span className="font-display text-[1.1rem] font-semibold text-gold whitespace-nowrap self-end sm:self-auto">
               {inst.value.toLocaleString("es-ES", {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
