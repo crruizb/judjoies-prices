@@ -83,7 +83,7 @@ export default function App() {
             {instances.map((inst, idx) => {
               const isActive = inst.id === activeId;
               return (
-                <div key={inst.id} className="relative flex items-center group">
+                <div key={inst.id} className="relative flex items-center">
                   <button
                     onClick={() => setActiveId(inst.id)}
                     className={`px-4 py-2 font-body text-[0.75rem] tracking-[0.08em] uppercase transition-all cursor-pointer rounded-t border-t border-x ${
@@ -100,7 +100,7 @@ export default function App() {
                   {instances.length > 1 && (
                     <button
                       onClick={() => removeInstance(inst.id)}
-                      className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-surface border border-border-line text-text-dim hover:text-text-primary hover:border-text-muted flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-[0.6rem] leading-none"
+                      className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-surface border border-border-line text-gold hover:text-text-primary hover:border-text-muted flex items-center justify-center cursor-pointer text-[0.6rem] leading-none"
                       aria-label={`Eliminar calculadora ${idx + 1}`}
                     >
                       ×
